@@ -1,9 +1,4 @@
----
-title: "Reproducible Research: Peer Assessment 1"
-output: 
-  html_document:
-    keep_md: true
----
+# Reproducible Research: Peer Assessment 1
 
 
 ## Loading and preprocessing the data
@@ -53,7 +48,7 @@ totalSteps <- tapply(data$steps[!is.na(data$steps)], data$date[!is.na(data$steps
 hist(totalSteps, col="green")
 ```
 
-![plot of chunk total_steps](figure/total_steps-1.png) 
+![](./PA1_template_files/figure-html/total_steps-1.png) 
 
 The mean total number of steps taken per day is 
 
@@ -86,7 +81,7 @@ plot(unique(data$interval),intervalMeans,type="l",
      xlab="5 minute intervals", ylab="average number of steps taken",main="Average daily activity")
 ```
 
-![plot of chunk daily_activity_graph](figure/daily_activity_graph-1.png) 
+![](./PA1_template_files/figure-html/daily_activity_graph-1.png) 
 
 The 5 minute interval which has the highest average activity across all days is
 
@@ -138,7 +133,7 @@ totalSteps <- tapply(newData$steps, newData$date,sum)
 hist(totalSteps, col="blue")
 ```
 
-![plot of chunk total_stepsNew](figure/total_stepsNew-1.png) 
+![](./PA1_template_files/figure-html/total_stepsNew-1.png) 
 
 The mean total number of steps taken per day is 
 
@@ -203,4 +198,4 @@ with(newData,{
 })
 ```
 
-![plot of chunk weekly_activity](figure/weekly_activity-1.png) 
+![](./PA1_template_files/figure-html/weekly_activity-1.png) 
